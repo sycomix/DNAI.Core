@@ -28,6 +28,6 @@ hashes = [(fname, hash_bytestr_iter(file_as_blockiter(open(fname, 'rb')), hashli
     for fname in fnamelst]
 
 for h in hashes:
-    with open("checksum_" + h[0][:-4] + ".md5", 'wb') as file:
+    with open(f"checksum_{h[0][:-4]}.md5", 'wb') as file:
         file.write(h[1])
 
